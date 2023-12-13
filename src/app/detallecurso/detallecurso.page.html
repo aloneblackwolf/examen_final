@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="text-align: left;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle del Curso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <header class="titul">Alumnos del Curso:
+    {{ cursol?.nombre }}</header>
+    <img class="codigoqr centro-horizontal" [src]="qrDataURL" *ngIf="qrDataURL">
+    <p>Escanear Qr</p>
+    <ion-list style="text-align: center;">
+        <ion-list-header>
+               * Listado:
+        </ion-list-header>
+        <br>
+        <ion-item *ngFor="let alumno of alumnosl">
+            <ion-label> - {{ alumno.nombre }}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
+

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Home Alumno</ion-title>
+    <ion-buttons slot="end">
+      <!-- Agrega un botón con el icono de logout -->
+      <ion-button (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="wrapper">
+    <div class="logo">
+      Duoc<span>UC</span>
+    </div>
+    <div class="tag_line">
+      HACIENDO TU REGISTRO MAS FACIL
+    </div>
+
+    <div class="triangle">
+      <div class="trinagle-bottomright"></div>
+      <div class="trinagle-right"></div>
+    </div>
+
+      <ion-card *ngIf="userData"class="box">
+        <ion-card-header class="alumno" style="text-align: center;">
+          Bienvenido Alumno: {{ userData.nombre }}
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title style="text-align: center;">Usuario: {{ userData.user }}</ion-card-title>
+          <p>ID: {{ userData.id }}</p>
+          <p>Correo: {{ userData.correo }}</p>
+          <p>Nombre: {{ userData.nombre }}</p>
+          <p>Tipo de Perfil: {{ userData.tipoPerfil }}</p>
+          <p>Carrera: {{ userData.carrera }}</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-button class="btn2" expand="full" routerLink="/scanner-qr">Escanear QR</ion-button>
+    </div>
+</ion-content>

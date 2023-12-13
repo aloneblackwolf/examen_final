@@ -1,0 +1,135 @@
+.wrapper{
+  width:100%;
+  .logo{
+      font-size:70px;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #ffd700;
+      span{
+          color:rgb(34, 35, 39);
+      }
+  }
+  .tag_line{
+      color: gray;
+      text-align: center;
+      font-size:8px;
+      padding: 10px;
+  }
+
+  .triangle{
+      position: relative;
+      z-index:-1;
+      .trinagle-bottomright{
+          position:absolute;
+          right:0;
+          top: 80px;
+          width:0;
+          height:0;
+          border-bottom: 1px solid #282828;
+          border-left: 200px solid transparent;
+      }
+      .triangle-right{
+          position: absolute;
+          left: 0;
+          top: 200px;
+          width: 0;
+          height: 0;
+          border-top: 200px solid #FFD700;
+          border-right: 200px solid transparent;
+      }
+  }
+
+  .box{
+      width:92%;
+      height:auto;
+      z-index:999;
+      margin-left:auto;
+      margin-right: auto;
+      margin-top: 20px;
+      padding-bottom:20px;
+      margin-bottom:20px;
+      border-radius: 20px;
+      box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;
+      background-color: #FFF;
+
+      h2{
+          text-align: center;
+          padding-top: 15px !important;
+          font-size:2rem;
+          font-weight:600;
+          color:#022c43;
+      }
+      .btn_div{
+          display:flex;
+          margin-top: 20px;
+          font-size:30px;
+          .btn{
+              background-color:#FFD700;
+              padding:20px 80px;
+              color:#FFF;
+              font-weight: 600;
+              margin-right: auto;
+              margin-left: auto;
+              font-size:30px;
+          }
+      }
+      p{
+          color:gray;
+          margin-top:10px;
+          text-align: center;
+          
+      }
+      .social-login{
+          display:flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          column-gap: 40px;
+          ion-icon{
+              font-size:30px;
+          }
+
+          .google{
+              color:#DB4437;
+          }
+      }
+
+  }
+  
+
+  .bottom{
+      p{
+          text-align: center;
+          --display: flex;
+
+      }
+
+      .btn_bottom{
+          display:flex;
+          margin-bottom: 20px;
+
+          #signin{
+              background-color: #FFF;
+              padding: 10px 30px;
+              color: #022c43;
+              font-size:30px;
+              font-weight: 600;
+              border-radius: 10px;
+              margin-left: auto;
+              margin-right: auto;
+              border:1px solid #022c42;
+
+          }
+      }
+  }    
+}
+
+
+.btn2{
+    font-size: 25px;
+    font-weight: 550;
+    margin-right: auto;
+    margin-left: auto;
+
+}

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="text-align: left;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large" style="font-size: 25px;">Restablecer Contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="wrapper">
+      <div class="logo">
+        Duoc<span>UC</span>
+      </div>
+      <div class="tag_line">
+        HACIENDO TU REGISTRO MAS FACIL
+      </div>
+  
+      <div class="triangle">
+        <div class="trinagle-bottomright"></div>
+        <div class="trinagle-right"></div>
+      </div>
+      
+      <div class="box">
+        <h2>Recupera tu Contraseña</h2><hr>
+  
+  
+        <form [formGroup]="usuario">
+          <ion-item>
+            <ion-input id="nombre" label="{{textUser}}: " labelPlacement="floating" placeholder="{{desUser}}" formControlName="username"></ion-input>
+          </ion-item>
+        </form>
+        
+  
+        <div class="btn_div" style="padding-left: 10px">
+          <button class="btn"(click)="searchUser()">Recuperar</button>
+        </div>
+        <p>Tu Contraseña será enviada a tu Gmail:</p>
+
+        <!-- <ion-button class="btn2" expand="full" (click)="redirectToVerificationPage()">Cambiar Contraseña</ion-button> -->
+
+      </div>
+    </div>
+  </ion-content>
+  
+</ion-content>

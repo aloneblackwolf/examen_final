@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="text-align: left;"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Home Docente</ion-title>
+    <ion-buttons slot="end">
+      <!-- Agrega un botón con el icono de logout -->
+      <ion-button (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="logo">
+      Duoc<span>UC</span>
+    </div>
+    <div class="tag_line">
+      HACIENDO TU REGISTRO MAS FACIL
+    </div>
+
+    <div class="triangle">
+      <div class="trinagle-bottomright"></div>
+      <div class="trinagle-right"></div>
+    </div>
+
+      <ion-card *ngIf="userData"class="box">
+        <ion-card-header class="docente" style="text-align: center;">
+          Bienvenido Profesor: {{ userData.nombre }}
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title style="text-align: center;">Usuario: {{ userData.user }}</ion-card-title>
+          <p>ID: {{ userData.id }}</p>
+          <p>Correo: {{ userData.correo }}</p>
+          <p>Nombre: {{ userData.nombre }}</p>
+          <p>Tipo de Perfil: {{ userData.tipoPerfil }}</p>
+          <p>Carrera: {{ userData.carrera }}</p>
+        </ion-card-content>
+        
+      </ion-card>
+    
+      <div>
+        <ion-list>
+          <ion-item *ngFor="let curso of cursos">
+            <ion-label>
+              <h2>Nombre: {{ curso.nombre }}</h2>
+              <h3>ID: {{ curso.id }}</h3>
+              <h3>Código: {{ curso.codigo }}</h3>
+              <h3>Sección: {{ curso.seccion }}</h3>
+            </ion-label>
+            <ion-button fill="outline" slot="end" (click)="verDetalleCurso(curso.id)">Ver Detalle</ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+</ion-content>

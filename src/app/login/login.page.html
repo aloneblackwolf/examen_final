@@ -1,0 +1,48 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Ingreso de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="logo">
+      Duoc<span>UC</span>
+    </div>
+    <div class="tag_line">
+      HACIENDO TU REGISTRO MAS FACIL
+    </div>
+
+    <div class="triangle">
+      <div class="trinagle-bottomright"></div>
+      <div class="trinagle-right"></div>
+    </div>
+    
+    <div class="box">
+      <h2>Inicia Sesión</h2><hr>
+      <form [formGroup]="usuario">
+        <ion-item>
+          <ion-input id="nombre" label="{{textUser}}: " labelPlacement="floating" placeholder="{{desUser}}" formControlName="username"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="password" id="contrasena" label="{{textPass}}: " labelPlacement="floating" placeholder="{{desPass}}" formControlName="password"></ion-input>
+        </ion-item>
+
+      </form>
+
+      <div class="btn_div ">
+        <button class="btn" color="#FFD700" [disabled]="!usuario.valid"  (click)="apiLogin()">{{textBtn}}</button> 
+      </div>
+
+    <div class="bottom">
+      <p>¿Olvidaste tu contraseña?</p>
+
+      <div class="btn_bottom">
+        <button id="signin" type="submit" routerLink="/restablecer">RECUPERAR CONTRASEÑA</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</ion-content>
